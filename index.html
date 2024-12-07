@@ -1,0 +1,575 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Predictive Search Bar</title>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search-bar" class="sr-only">Search for items</label>
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search items...">
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+</div>
+    <script src="script.js"></script>
+<!-- TOTAL BUDGET DISPlay-->
+<div class="quick-actions">
+  <div class="budget-planning">
+    <label for="budget">Set Your Budget</label>
+    <input type="number" id="budget" placeholder="Enter amount" />
+    <button class="set-budget-btn">Set Budget</button>
+    <div class="budget-display">
+      <p>Budget Remaining: <span id="budget-display">₹0</span></p>
+    </div>
+    <button class="reset-btn">Reset Budget and Cart</button>
+
+  </div>
+</div>
+
+
+    <!-- Recommenations -->
+    <div class="section">
+      <h2>Recommendations</h2>
+      <div class="scrollable-container">
+
+        <div class="card">
+          <div class="image">
+              <img class ="cntimg"src="img/dia/milk.jpg" alt="Milk">
+          </div>
+          <p class="product-name">Milk</p>
+          <p class="price">500 ml &nbsp; &nbsp; &nbsp;&nbsp;&#x20B9 30</p>
+          <button class="add-to-cart" data-price="30" data-name="Milk">Add to List</button>
+        </div>
+
+        <div class="card">
+          <div class="image">
+            <img class="cntimg" src="img/oil/oil.jpg" alt="oil">
+          </div>
+          <p class="product-name">Cooking oil</p>
+          <p class="price">500 ml &nbsp; &nbsp; &nbsp;&nbsp;   &#x20B9 200</p>
+          <button class="add-to-cart" data-price="200"data-name="Cooking oil">Add to List</button>
+        </div> 
+        <div class="card">
+          <div class="image">
+            <img class ="cntimg" src="img/nuts/badam.jpg" alt="badam">
+          </div>
+          <p class="product-name">Badam</p>
+          <p class="price">250 g &nbsp; &nbsp; &nbsp;&nbsp;   &#x20B9 200</p>
+          <button class="add-to-cart" data-price="200">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img class ="cntimg" src="img/nuts/dates.jpg" alt="dates">
+          </div>
+          <p class="product-name">Dates</p>
+          <p class="price">500 kg &nbsp; &nbsp;    &#x20B9 400</p>
+          <button class="add-to-cart">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image"> 
+            <img class ="cntimg" src="img/pasta/pasta.jpg" alt="pasta">
+          </div>
+          <p class="product-name">Pasta</p>
+          <button class="add-to-cart">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img class ="cntimg" src="img/veg/greenchilly.jpg" alt="greenchilly">
+          </div>
+          <p class="product-name">Green Chilly</p>
+          <button class="add-to-cart">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img class ="cntimg" src="img/veg/salt.jpg" alt="salt">
+          </div>
+          <p class="product-name">Salt</p>
+          <button class="add-to-cart">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img class ="cntimg" src="img/juice/water.jpg" alt="water">
+          </div>
+          <p class="product-name">Water</p>
+          <button class="add-to-cart">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img class ="cntimg" src="img/cookies/biscuit.jpg" alt="Biscuit">
+          </div>
+          <p class="product-name">Biscuit</p>
+          <button class="add-to-cart">Add to List</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="card">
+          <div class="image"></div>
+          <p class="product-name">Product 2</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <p class="view-all" id ="view-all">View All</p>
+      <br>
+    </div>
+
+    <!-- Grocery & Kitchen Section -->
+    <div class="section">
+      <h2>Grocery & Kitchen</h2>
+      <div class="scrollable-container">
+        
+        <div class="card">
+          <a href="vegetables.html" style="text-decoration: none; color: inherit;">
+            <div class="image">
+              <img class="cntimg" src="img/veg/main.jpg" alt="Vegetables">
+            </div>
+            <p>Vegetables</p>
+          </a>
+        </div>
+        
+        <div class="card">
+          <a href="fruits.html" style="text-decoration: none; color: inherit;">
+            <div class="image">
+              <img class="cntimg" src="img/fru/main.jpg" alt="Fruits">
+            </div>
+            <p>Fruits</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="masala.html" style="text-decoration: none; color: inherit;">
+            <div class="image">
+              <img class="cntimg" src="img/masala/main.jpg" alt="Fruits">
+            </div>
+            <p>Masala</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="cookies.html" style="text-decoration: none; color: inherit;">
+            <div class="image">
+              <img class="cntimg" src="img/snack/cookies/biscuit.jpg" alt="Fruits">
+            </div>
+            <p>Biscuits And Cookies</p>
+          </a>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Vegetables</p>
+        </div>
+
+      </div>
+      <p class="view-all"id ="view-all">View All</p><br>
+    </div>
+
+    <!-- Snacks Section -->
+    <div class="section">
+      <h2>Snacks</h2>
+      <div class="scrollable-container">
+        <div class="card">
+          <a href="chips.html" style="text-decoration: none; color: inherit;">
+            <div class="image">
+              <img class="cntimg" src="img/snack/chips/main.jpg" alt="Chips">
+            </div>
+            <p>Chips</p>
+          </a>
+        </div>
+          <div class="card">
+            <a href="cookies.html" style="text-decoration: none; color: inherit;">
+              <div class="image">
+                <img class="cntimg" src="img/snack/cookies/biscuit.jpg" alt="Fruits">
+              </div>
+              <p>Biscuits And Cookies</p>
+            </a>
+          </div>
+
+          <div class="card">
+            <a href="cooldrinks.html" style="text-decoration: none; color: inherit;">
+              <div class="image">
+                <img class="cntimg" src="img/snack/cooldrinks/main.jpg" alt="Fruits">
+              </div>
+              <p>Cool Drinks</p>
+            </a>
+          </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Tea, Coffee</p>
+        </div>
+        <div class="category">
+          <div class="image"></div>
+          <p>Cookies</p>
+        </div>
+      </div>
+      <p class="view-all"id ="view-all">View All</p><br>
+    </div>
+
+    <!-- Recipe Ideas Section -->
+    <div class="section">
+      <h2>Recipe Ideas</h2>
+      <div class="scrollable-container">
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Pizza</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+        <div class="recipe-card">
+          <div class="image"></div>
+          <p>Biryani</p>
+        </div>
+      </div>
+      <p class="view-all" id ="view-all">View All</p><br>
+    </div> 
+    <div class="banner clickable-banner">
+      <img src="img/banner2.jpg" alt="Click to Explore More" class="banner-img">
+    </div>
+        <!-- Dairy Products Section -->         
+        <div class="section">
+          <h2>Dairy Products</h2>
+          <div class="scrollable-container">
+            <div class="category">
+              <div class="image"></div>
+              <p>Milk</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Cheese</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Butter</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Yogurt</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ghee</p>
+            </div>
+          </div>
+          <p class="view-all" id ="view-all">View All</p><br>
+        </div>
+    
+        <!-- Cool Drinks Section -->
+        <div class="section">
+          <h2>Cool Drinks</h2>
+          <div class="scrollable-container">
+            <div class="category">
+              <div class="image"></div>
+              <p>Juices</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Sodas</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Energy Drinks</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Cold Coffee</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            <div class="category">
+              <div class="image"></div>
+              <p>Ice Tea</p>
+            </div>
+            
+          </div>
+        
+          <p class="view-all" id ="view-all">View All</p><br>
+        </div>
+  </div>
+
+
+  <footer id="cart-summary-footer" style="display: none;">
+    <div class="cart-summary">
+      <span>Items: <span id="item-count">0</span></span>
+      <span>Budget Remaining: ₹<span id="budget-remaining">1000</span></span>
+      <button id="go-to-cart">Go To Cart</button>
+    </div>
+  </footer>
+
+
+  
+  <script src="check.js"></script>
+
+  
+
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-nav">
+    <button onclick="window.location.href='landing.html'">🏠</button>
+    <button onclick="window.location.href='index.html'">📂</button>
+    <button onclick="window.location.href='list.html'">🛒</button>
+    <button  onclick="window.location.href='profile.html'">👤</button>
+  </div>
+</body>
+</html>

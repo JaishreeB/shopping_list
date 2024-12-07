@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chips and Crunchies</title>
+<link rel="stylesheet" href="vegetables.css">
+<script src="check.js"></script>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search-bar" class="sr-only">Search for items</label>
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search items...">
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+</div>
+  <h1>Cool Drinks</h1>
+  <div id="vegetable-list" class="vegetable-list">
+    <!-- List of vegetable containers -->
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/fanta.jpg" alt="Green Lays">
+      </div>
+      <p class="product-name">Fanta</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart" data-price="40"data-name="Fanta">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/frooti1.jpg" alt="Blue Lays">
+        
+      </div>
+      <p class="product-name">Frooti</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 45</p>
+      <button class="add-to-cart" data-price="45"data-name="Frooti">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/limea.jpg" alt="cherry">
+      </div>
+      <p class="product-name">Limca</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 35</p>
+      <button class="add-to-cart"data-price="35"data-name="Limca">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/sprite.jpg" alt="Grapes">
+      </div>
+      <p class="product-name">Sprite</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="Sprite">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/slice.jpg" alt="Guava">
+      </div>
+      <p class="product-name">Slice</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="Slice">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/maaza.jpg" alt="Jackfruits">
+      </div>
+      <p class="product-name">Maaza</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 30</p>
+      <button class="add-to-cart"data-price="30" data-name="Maaza">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/pepsi.jpg" alt="Mango">
+      </div>
+      <p class="product-name">Pepsi</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 35</p>
+      <button class="add-to-cart"data-price="35"data-name="Pepsi">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/cooco.jpg" alt="Orange">
+      </div>
+      <p class="product-name">Colo Cola</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="Colo Cola">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/pulpy orange.jpg" alt="Papaya">
+      </div>
+      <p class="product-name">Puply Orange</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 35</p>
+      <button class="add-to-cart"data-price="35"data-name="Puply Orange">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/paperboat.jpg" alt="Pine Apple">
+      </div>
+      <p style ="font-size: 15px" class ="product-name">Paper Boat</p>
+      <p class="price">100ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 15</p>
+      <button class="add-to-cart"data-price="15"data-name="Everest Chat Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/coke.jpg" alt="Garlic">
+      </div>
+      <p class="product-name">Coke</p>
+      <p class="price">250ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 50</p>
+      <button class="add-to-cart"data-price="50"data-name="Coke">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cooldrinks/thumbsup.jpg" alt="DrumStick">
+      </div>
+      <p class="product-name">ThumbsUp</p>
+      <p class="price">450ml &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="ThumbsUp">Add to List</button>
+    </div>
+  </div>
+</div>
+<footer id="cart-summary-footer" style="display: none;">
+  <div class="cart-summary">
+      <span>Items: <span id="item-count">0</span></span>
+      <span>Budget Remaining: ₹<span id="budget-remaining">1000</span></span>
+      <button id="go-to-cart">Go To Cart</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+<div class="bottom-nav">
+  <button>🏠</button>
+  <button>📂</button>
+  <button>🛒</button>
+  <button>👤</button>
+</div>
+</body>
+</html> 

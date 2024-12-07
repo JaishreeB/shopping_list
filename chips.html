@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chips and Crunchies</title>
+<link rel="stylesheet" href="vegetables.css">
+<script src="check.js"></script>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search-bar" class="sr-only">Search for items</label>
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search items...">
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+</div>
+  <h1>Chips and Crunchies</h1>
+  <div id="vegetable-list" class="vegetable-list">
+    <!-- List of vegetable containers -->
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/greenlays.jpg" alt="Green Lays">
+      </div>
+      <p class="product-name">Green Lays</p>
+      <p class="price">1 Pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart" data-price="10"data-name="Green Lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/bluelays.jpg" alt="Blue Lays">
+        
+      </div>
+      <p class="product-name">Blue Lays</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart" data-price="10"data-name="Blue Lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/greenkur.jpg" alt="cherry">
+      </div>
+      <p class="product-name">Green Kurkure</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Green Kurkure">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/cheetos.jpg" alt="Grapes">
+      </div>
+      <p class="product-name">Cheetos</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Cheetos">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/madangles.jpg" alt="Guava">
+      </div>
+      <p class="product-name">Mad Angles</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Mad Angles">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/yellowlays.jpg" alt="Jackfruits">
+      </div>
+      <p class="product-name">Yellow Lays</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Yellow Lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/pringles.jpg" alt="Mango">
+      </div>
+      <p class="product-name">Pringles</p>
+      <p class="price">1 pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 100</p>
+      <button class="add-to-cart"data-price="100"data-name="Pringles">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/redlays.jpg" alt="Orange">
+      </div>
+      <p class="product-name">Red Lays</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Red lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/dgreenlays.jpg" alt="Papaya">
+      </div>
+      <p class="product-name">Dark Green Lays</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Dark Green Lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/yellow2lays.jpg" alt="Pine Apple">
+      </div>
+      <p style ="font-size: 15px" class ="product-name">Green Lays</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Green lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/greenlays.jpg" alt="Garlic">
+      </div>
+      <p class="product-name">Lays</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/chips/bluelays.jpg" alt="DrumStick">
+      </div>
+      <p class="product-name">Blue Lays</p>
+      <p class="price">250g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Blue Lays">Add to List</button>
+    </div>
+  </div>
+</div>
+<footer id="cart-summary-footer" style="display: none;">
+  <div class="cart-summary">
+      <span>Items: <span id="item-count">0</span></span>
+      <span>Budget Remaining: ₹<span id="budget-remaining">1000</span></span>
+      <button id="go-to-cart">Go To Cart</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+<div class="bottom-nav">
+  <button onclick="window.location.href='landing.html'">🏠</button>
+  <button onclick="window.location.href='index.html'">📂</button>
+  <button onclick="window.location.href='list.html'">🛒</button>
+  <button  onclick="window.location.href='profile.html'">👤</button>
+</div>
+</body>
+</html> 

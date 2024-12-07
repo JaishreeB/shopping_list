@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List App</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Hi David</h1>
+            <p class="subtitle">Makes shopping easier</p>
+            <button class="create-button" id="create-button">Create a New Shopping List</button>
+        </header>
+
+        <section class="lists-section">
+            <h2>Your Lists</h2>
+            <div class="lists-grid">
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modal" class="hidden">
+            <div class="modal-content">
+                <h2>Name Your Shopping List</h2>
+                <input type="text" id="list-name-input" placeholder="Enter list name">
+                <button id="submit-list-name">Create</button>
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+
+        <section class="recommendations-section">
+            <h2>List Recommendations</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <span>Weekly Groceries Template</span>
+                    <button class="edit-button">Edit</button>
+                </div>
+                <div class="recommendation-card">
+                    <span>Household Essentials</span>
+                    <button class="edit-button">Edit</button>
+                </div>
+                <div class="recommendation-card">
+                    <span>Party Supplies Checklist</span>
+                    <button class="edit-button">Edit</button>
+                </div>
+                <div class="recommendation-card">
+                    <span>Camping Trip Essentials</span>
+                    <button class="edit-button">Edit</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chips and Crunchies</title>
+<link rel="stylesheet" href="vegetables.css">
+<script src="check.js"></script>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search-bar" class="sr-only">Search for items</label>
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search items...">
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+</div>
+  <h1>Masalas</h1>
+  <div id="vegetable-list" class="vegetable-list">
+    <!-- List of vegetable containers -->
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthi65.jpg" alt="Green Lays">
+      </div>
+      <p class="product-name">Sakthi Chicken 65</p>
+      <p class="price">50g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart" data-price="40"data-name="Sakthi Chicken 65">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthibiriyani.jpg" alt="Blue Lays">
+        
+      </div>
+      <p class="product-name">Sakthi Chicken Biryani</p>
+      <p class="price">50 g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 45</p>
+      <button class="add-to-cart" data-price="45"data-name="Sakthi Chicken Biryani">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthichicken.jpg" alt="cherry">
+      </div>
+      <p class="product-name">Sakthi Chicken Masala</p>
+      <p class="price">100 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 55</p>
+      <button class="add-to-cart"data-price="55"data-name="Sakthi Chicken Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthidhal.jpg" alt="Grapes">
+      </div>
+      <p class="product-name">Sakthi Dhal Masala</p>
+      <p class="price">100g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 45</p>
+      <button class="add-to-cart"data-price="45"data-name="Sakthi Dhal Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthifish.jpg" alt="Guava">
+      </div>
+      <p class="product-name">Sakthi Fish Masala</p>
+      <p class="price">50g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="Sakthi Fish Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthigaram.jpg" alt="Jackfruits">
+      </div>
+      <p class="product-name">Sakthi Garam Masala</p>
+      <p class="price">50g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="Sakthi Garam Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/sakthimutton.jpg" alt="Mango">
+      </div>
+      <p class="product-name">Sakthi Mutton Masala</p>
+      <p class="price">50g&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 35</p>
+      <button class="add-to-cart"data-price="35"data-name="Sakthi Mutton Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/aachikulampu.jpg" alt="Orange">
+      </div>
+      <p class="product-name">Aachi Kulampu Masala</p>
+      <p class="price">200g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 110</p>
+      <button class="add-to-cart"data-price="110"data-name="Aachi Kulampu Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/everest biriyani.jpg" alt="Papaya">
+      </div>
+      <p class="product-name">Everest Biryani Masala</p>
+      <p class="price">50g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 85</p>
+      <button class="add-to-cart"data-price="85"data-name="Everest Biryani Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/everestchatmasala.jpg" alt="Pine Apple">
+      </div>
+      <p style ="font-size: 15px" class ="product-name">Everest Chat Masala</p>
+      <p class="price">100g&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 85</p>
+      <button class="add-to-cart"data-price="85"data-name="Everest Chat Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/achigaram.jpg" alt="Garlic">
+      </div>
+      <p class="product-name">Aachi Garam Masala</p>
+      <p class="price">50g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 35</p>
+      <button class="add-to-cart"data-price="35"data-name="Aachi Garam Masala">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/masala/catch turmeric.jpg" alt="DrumStick">
+      </div>
+      <p class="product-name">Catch Turmeric</p>
+      <p class="price">200g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 90</p>
+      <button class="add-to-cart"data-price="90"data-name="Catch Turmeric">Add to List</button>
+    </div>
+  </div>
+</div>
+<footer id="cart-summary-footer" style="display: none;">
+  <div class="cart-summary">
+      <span>Items: <span id="item-count">0</span></span>
+      <span>Budget Remaining: ₹<span id="budget-remaining">1000</span></span>
+      <button id="go-to-cart">Go To Cart</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+<div class="bottom-nav">
+  <button onclick="window.location.href='landing.html'">🏠</button>
+  <button onclick="window.location.href='index.html'">📂</button>
+  <button onclick="window.location.href='list.html'">🛒</button>
+  <button  onclick="window.location.href='profile.html'">👤</button>
+</div>
+</body>
+</html> 

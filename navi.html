@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Store</title>
+    <link rel="stylesheet" href="navi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Store</h1>
+        <form id="store-selection-form">
+            <label for="store">Select Store:</label>
+            <select id="store" name="store">
+                <option value="store1">Store 1</option>
+                <option value="store2">Store 2</option>
+            </select>
+            
+            <label for="shopping-list">Select Shopping List:</label>
+            <select id="shopping-list" name="shopping-list">
+                <option value="list1">Shopping List 1</option>
+                <option value="list2">Shopping List 2</option>
+            </select>
+            
+            <button type="submit">Go to Shopping List</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('store-selection-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const store = document.getElementById('store').value;
+            const shoppingList = document.getElementById('shopping-list').value;
+            window.location.href = `navi2.html?store=${store}&list=${shoppingList}`;
+        });
+    </script>
+</body>
+</html>

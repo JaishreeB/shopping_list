@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Grocery App - Tutorial</title>
+    <style>
+        /* CSS Styling */
+        .hidden {
+            display: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tooltip {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .tooltip p {
+            margin: 0 0 10px;
+        }
+
+        .tooltip button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .tooltip button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tutorial Walkthrough -->
+    <div id="tutorial-overlay" class="overlay hidden">
+        <div class="tooltip" id="tooltip-1">
+            <p>Welcome to the Smart Grocery App! Use this search bar to quickly find your items.</p>
+            <button onclick="nextStep()">Next</button>
+        </div>
+        <div class="tooltip hidden" id="tooltip-2">
+            <p>Check out the 'Quick Actions' for easy budget planning!</p>
+            <button onclick="nextStep()">Next</button>
+        </div>
+        <div class="tooltip hidden" id="tooltip-3">
+            <p>Explore categories like Groceries, Snacks, and more!</p>
+            <button onclick="endTutorial()">Got it!</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Walkthrough
+        let currentStep = 1;
+
+        function nextStep() {
+            document.getElementById(`tooltip-${currentStep}`).classList.add('hidden');
+            currentStep++;
+            const nextTooltip = document.getElementById(`tooltip-${currentStep}`);
+            if (nextTooltip) {
+                nextTooltip.classList.remove('hidden');
+            }
+        }
+
+        function endTutorial() {
+            document.getElementById('tutorial-overlay').classList.add('hidden');
+        }
+
+        // Start the tutorial when the page loads
+        window.onload = () => {
+            const tutorialCompleted = localStorage.getItem('tutorialCompleted');
+            if (!tutorialCompleted) {
+                document.getElementById('tutorial-overlay').classList.remove('hidden');
+            }
+        };
+
+        // Mark tutorial as completed
+        function endTutorial() {
+            document.getElementById('tutorial-overlay').classList.add('hidden');
+            localStorage.setItem('tutorialCompleted', 'true');
+        }
+    </script>
+</body>
+</html>

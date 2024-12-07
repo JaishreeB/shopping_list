@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruits</title>
+<link rel="stylesheet" href="vegetables.css">
+<script src="check.js"></script>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search-bar" class="sr-only">Search for items</label>
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search items...">
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+</div>
+  <h1>Fruits</h1>
+  <div id="vegetable-list" class="vegetable-list">
+    <!-- List of vegetable containers -->
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/apples.jpg" alt="Apples">
+      </div>
+      <p class="product-name">Apple</p>
+      <p class="price">1kg &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 250</p>
+      <button class="add-to-cart" data-price="250"data-name="Apple">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/banana.jpg" alt="banana">
+      </div>
+      <p class="product-name">Banana</p>
+      <p class="price">10 Pieces &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 100</p>
+      <button class="add-to-cart"class="add-to-list" data-price="100">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/cherry.jpg" alt="cherry">
+      </div>
+      <p class="product-name">Cherry</p>
+      <p class="price">250g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 50</p>
+      <button class="add-to-cart"data-price="50">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/grapes.jpg" alt="Grapes">
+      </div>
+      <p class="product-name">Grapes</p>
+      <p class="price">500g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 80</p>
+      <button class="add-to-cart"data-price="80">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/guava.jpg" alt="Guava">
+      </div>
+      <p class="product-name">Guava</p>
+      <p class="price">500g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 60</p>
+      <button class="add-to-cart"data-price="60">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/jackfruits.jpg" alt="Jackfruits">
+      </div>
+      <p class="product-name">Jackfruits</p>
+      <p class="price">1kg &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 100</p>
+      <button class="add-to-cart"data-price="60">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/mango.jpg" alt="Mango">
+      </div>
+      <p class="product-name">Mango</p>
+      <p class="price">250g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 80</p>
+      <button class="add-to-cart"data-price="80">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/orange.jpg" alt="Orange">
+      </div>
+      <p class="product-name">Orange</p>
+      <p class="price">1kg &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 150</p>
+      <button class="add-to-cart"data-price="150">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/papaya.jpg" alt="Papaya">
+      </div>
+      <p class="product-name">Papaya</p>
+      <p class="price">1kg &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 100</p>
+      <button class="add-to-cart"data-price="100">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/pineaplle.jpg" alt="Pine Apple">
+      </div>
+      <p style ="font-size: 15px" class ="product-name">Pine Apple</p>
+      <p class="price">150g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 90</p>
+      <button class="add-to-cart"data-price="90">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/pomo.jpg" alt="Garlic">
+      </div>
+      <p class="product-name">Pomogranate</p>
+      <p class="price">500g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 100</p>
+      <button class="add-to-cart"data-price="100">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/fru/straw.jpg" alt="DrumStick">
+      </div>
+      <p class="product-name">StrawBerry</p>
+      <p class="price">250g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 300</p>
+      <button class="add-to-cart"data-price="300">Add to List</button>
+    </div>
+  </div>
+</div>
+<footer id="cart-summary-footer" style="display: none;">
+  <div class="cart-summary">
+      <span>Items: <span id="item-count">0</span></span>
+      <span>Budget Remaining: ₹<span id="budget-remaining">1000</span></span>
+      <button id="go-to-cart">Go To Cart</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+<div class="bottom-nav">
+  <button onclick="window.location.href='landing.html'">🏠</button>
+  <button onclick="window.location.href='index.html'">📂</button>
+  <button onclick="window.location.href='list.html'">🛒</button>
+  <button  onclick="window.location.href='profile.html'">👤</button>
+</div>
+</body>
+</html> 

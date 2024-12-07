@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Map</title>
+    <link rel="stylesheet" href="navi.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Store Blueprint</h1>
+        <canvas id="store-map" width="1200" height="700"></canvas>
+        <div id="side-panel">
+            <h3>Selected Items</h3>
+            <ul id="selected-items">
+                <!-- Dynamically populated selected items -->
+            </ul>
+            <button onclick="finishShopping()">Finish Shopping</button>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const store = urlParams.get('store');
+        const shoppingList = urlParams.get('list');
+
+        const storeLayouts = {
+            store1: {
+                entrance: { x: 50, y: 650 },
+                zones: [
+                    { name: 'Dairy', x: 150, y: 100 },
+                    { name: 'Fruits', x: 350, y: 100 },
+                    { name: 'Beverages', x: 550, y: 100 },
+                    { name: 'Snacks', x: 750, y: 100 },
+                ],
+                products: {
+                    milk: { x: 150, y: 100 },
+                    apple: { x: 350, y: 100 },
+                    juice: { x: 550, y: 100 },
+                    chips: { x: 750, y: 100 },
+                },
+            },
+            store2: {
+                entrance: { x: 50, y: 650 },
+                zones: [
+                    { name: 'Dairy', x: 200, y: 150 },
+                    { name: 'Fruits', x: 400, y: 150 },
+                    { name: 'Beverages', x: 600, y: 150 },
+                    { name: 'Snacks', x: 800, y: 150 },
+                ],
+                products: {
+                    milk: { x: 200, y: 150 },
+                    apple: { x: 400, y: 150 },
+                    juice: { x: 600, y: 150 },
+                    chips: { x: 800, y: 150 },
+                },
+            },
+        };
+
+        const shoppingLists = {
+            store1: {
+                list1: ['milk', 'apple', 'juice', 'chips'],
+                list2: ['bread', 'orange', 'milk', 'soda'],
+            },
+            store2: {
+                list1: ['rice', 'potato', 'onion', 'tomato'],
+                list2: ['cereal', 'flour', 'sugar', 'salt'],
+            }
+        };
+
+        let selectedItems = new Set();
+        let collectedItems = new Set();
+
+        function generateShoppingList() {
+            const selectedItemsList = document.getElementById('selected-items');
+            const items = shoppingLists[store][shoppingList];
+            items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item.charAt(0).toUpperCase() + item.slice(1);
+                li.addEventListener('click', () => markItemTaken(item));
+                selectedItemsList.appendChild(li);
+            });
+        }
+
+        function markItemTaken(item) {
+            collectedItems.add(item);
+            drawStoreMap();
+            updateShoppingList();
+        }
+
+        function drawStoreMap() {
+            const canvas = document.getElementById('store-map');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const layout = storeLayouts[store];
+            const { entrance, zones, products } = layout;
+
+            // Draw entrance
+            ctx.beginPath();
+            ctx.arc(entrance.x, entrance.y, 15, 0, Math.PI * 2);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+            ctx.closePath();
+
+            // Draw zones
+            zones.forEach(zone => {
+                ctx.beginPath();
+                ctx.rect(zone.x, zone.y, 80, 50);
+                ctx.fillStyle = 'lightgrey';
+                ctx.fill();
+                ctx.stroke();
+                ctx.fillStyle = 'black';
+                ctx.fillText(zone.name, zone.x + 5, zone.y + 25);
+                ctx.closePath();
+            });
+
+            // Draw paths to products
+            Object.keys(products).forEach(product => {
+                const { x, y } = products[product];
+                ctx.beginPath();
+                ctx.arc(x, y, 10, 0, Math.PI * 2);
+                ctx.fillStyle = collectedItems.has(product) ? 'grey' : 'green';
+                ctx.fill();
+                ctx.closePath();
+            });
+
+            if (selectedItems.size > 0) {
+                const items = Array.from(selectedItems);
+                items.forEach(item => {
+                    const product = products[item];
+                    ctx.beginPath();
+                    ctx.arc(product.x, product.y, 10, 0, Math.PI * 2);
+                    ctx.fillStyle = 'yellow';
+                    ctx.fill();
+                    ctx.closePath();
+                });
+            }
+
+            drawPath(entrance, Object.values(products)[0]);
+        }
+
+        function drawPath(start, end) {
+            const canvas = document.getElementById('store-map');
+            const ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(start.x, start.y);
+            ctx.lineTo(end.x, end.y);
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([5, 5]);
+            ctx.stroke();
+            ctx.closePath();
+        }
+
+        generateShoppingList();
+        drawStoreMap();
+    </script>
+</body>
+</html>

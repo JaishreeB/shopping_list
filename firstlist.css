@@ -1,0 +1,366 @@
+/* Reset some default styles */
+body, h1, table {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  font-size: 14px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#list-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+/* Container for the list */
+#list-content {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+td {
+  font-size: 1rem;
+}
+
+.delete-column {
+  text-align: center;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Style for the total cost section */
+#total-cost {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#shopping-list-body tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style for "No items in your list" */
+#shopping-list-body td[colspan="5"] {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsive Design for Mobile View */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  #list-title {
+      font-size: 1.6rem;
+  }
+
+  #list-content {
+      padding: 10px;
+  }
+
+  table {
+      font-size: 0.9rem;
+  }
+
+  th, td {
+      padding: 8px;
+  }
+
+  .delete-btn {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+  }
+
+  #total-cost {
+      font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+      font-size: 11px;
+      padding: 8px;
+  }
+
+  #list-title {
+      font-size: 1.4rem;
+  }
+
+  table {
+      font-size: 0.8rem;
+  }
+
+  th, td {
+      padding: 6px;
+  }
+
+  .delete-btn {
+      font-size: 0.7rem;
+      padding: 3px 6px;
+  }
+
+  #total-cost {
+      font-size: 1rem;
+  }
+}
+/* Reset some default styles */
+/* Reset some default styles */
+body, h1, table {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+  font-size: 14px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#list-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+/* Container for the list */
+#list-content {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+td {
+  font-size: 1rem;
+}
+
+.delete-column {
+  text-align: center;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Style for the total cost section */
+#total-cost {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#shopping-list-body tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Store Selection */
+#store-selection {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#store-selector {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Canvas for Store Map */
+#store-navigation {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  display: block;
+  width: 95%; /* Take 95% of the container width for better visibility */
+  max-width: 1200px; /* Increase max width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  canvas {
+      width: 100%; /* Utilize the full width for mobile view */
+      max-width: 900px; /* Keep max width slightly smaller on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  canvas {
+      width: 100%; /* Full width for narrow screens */
+      max-width: 700px; /* Slightly reduced max width for better scaling */
+  }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 12px;
+      padding: 10px;
+  }
+
+  #list-title {
+      font-size: 1.6rem;
+  }
+
+  #list-content {
+      padding: 10px;
+  }
+
+  table {
+      font-size: 0.9rem;
+  }
+
+  th, td {
+      padding: 8px;
+  }
+
+  .delete-btn {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+  }
+
+  #total-cost {
+      font-size: 1.1rem;
+  }
+
+  #store-selector {
+      font-size: 0.9rem;
+      padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+      font-size: 11px;
+      padding: 8px;
+  }
+
+  #list-title {
+      font-size: 1.4rem;
+  }
+
+  table {
+      font-size: 0.8rem;
+  }
+
+  th, td {
+      padding: 6px;
+  }
+
+  .delete-btn {
+      font-size: 0.7rem;
+      padding: 3px 6px;
+  }
+
+  #total-cost {
+      font-size: 1rem;
+  }
+
+  #store-selector {
+      font-size: 0.8rem;
+      padding: 6px;
+  }
+
+  canvas {
+      width: 100%; /* Ensures it fits within smaller screens */
+      max-width: 100%; /* Removes restriction for smaller screens */
+      height: auto; /* Keeps aspect ratio intact */
+  }
+}

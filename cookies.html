@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chips and Crunchies</title>
+<link rel="stylesheet" href="vegetables.css">
+<script src="check.js"></script>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search-bar" class="sr-only">Search for items</label>
+    <input type="text" id="search-bar" class="search-bar" placeholder="Search items...">
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Suggestions"></div>
+</div>
+  <h1> Cookies And Buscuits </h1>
+  <div id="vegetable-list" class="vegetable-list">
+    <!-- List of vegetable containers -->
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/biscafe.jpg" alt="Green Lays">
+      </div>
+      <p class="product-name">Biscafe</p>
+      <p class="price">1 Pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 20</p>
+      <button class="add-to-cart" data-price="20"data-name="Biscafe">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/5050masala.jpg" alt="Blue Lays">
+        
+      </div>
+      <p class="product-name">50 50 Masala </p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 20</p>
+      <button class="add-to-cart" data-price="20"data-name="50 50 Masala ">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/bourborn.jpg" alt="cherry">
+      </div>
+      <p class="product-name">Bourborn</p>
+      <p class="price">1 pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 20</p>
+      <button class="add-to-cart"data-price="20"data-name="Bourborn">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/milh bikies.jpg" alt="Grapes">
+      </div>
+      <p class="product-name">Milk Bikis</p>
+      <p class="price">1 pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 20</p>
+      <button class="add-to-cart"data-price="20"data-name="Milk Bikis">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/littlehearts.jpg" alt="Guava">
+      </div>
+      <p class="product-name">Little hearts</p>
+      <p class="price">1 pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Little hearts">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/goo day.jpg" alt="Jackfruits">
+      </div>
+      <p class="product-name">Good Day</p>
+      <p class="price">1 pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Good Day">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/jimjam.jpg" alt="Mango">
+      </div>
+      <p class="product-name">JimJam</p>
+      <p class="price">1 pack&nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 100</p>
+      <button class="add-to-cart"data-price="100"data-name="JimJam">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/oreo.jpg" alt="Orange">
+      </div>
+      <p class="product-name">Oreo</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 10</p>
+      <button class="add-to-cart"data-price="10"data-name="Oreo">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/rusk.jpg "alt="Papaya">
+      </div>
+      <p class="product-name">Rusk</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 30</p>
+      <button class="add-to-cart"data-price="30"data-name="Rusk">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/qubz.jpg" alt="Pine Apple">
+      </div>
+      <p style ="font-size: 15px" class ="product-name">Qubz</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 30</p>
+      <button class="add-to-cart"data-price="30"data-name="Green lays">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/hidenseek.jpg" alt="Garlic">
+      </div>
+      <p class="product-name">Hide And Seek</p>
+      <p class="price">1 pack &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 20</p>
+      <button class="add-to-cart"data-price="20"data-name="Hide And Seek">Add to List</button>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img class="cntimg" src="img/snack/cookies/wheatbread.jpg" alt="DrumStick">
+      </div>
+      <p class="product-name">Wheat Bread</p>
+      <p class="price">250g &nbsp;&nbsp;&nbsp;&nbsp;&#x20B9 40</p>
+      <button class="add-to-cart"data-price="40"data-name="Wheat Bread">Add to List</button>
+    </div>
+  </div>
+</div>
+<footer id="cart-summary-footer" style="display: none;">
+  <div class="cart-summary">
+      <span>Items: <span id="item-count">0</span></span>
+      <span>Budget Remaining: ₹<span id="budget-remaining">1000</span></span>
+      <button id="go-to-cart">Go To Cart</button>
+  </div>
+</footer>
+<script src="script.js"></script>
+<div class="bottom-nav">
+  <button onclick="window.location.href='landing.html'">🏠</button>
+  <button onclick="window.location.href='index.html'">📂</button>
+  <button onclick="window.location.href='list.html'">🛒</button>
+  <button  onclick="window.location.href='profile.html'">👤</button>
+</div>
+</body>
+</html> 
